@@ -4,8 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.atcitivites.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -17,18 +15,19 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val button = binding.btnAntActivity
-        val buttonSecond = binding.btnSecondActivity
+        val user = binding.editTextPerson
+        val desc = binding.editTextDesc
+        val userFrom = binding.editTextFrom
+        val buttonSend = binding.buttonSend
 
-        button.setOnClickListener {
-            val intent = Intent(this, AnotherActivity::class.java)
-            startActivity(intent)
-        }
-
-        button.setOnClickListener {
+        buttonSend.setOnClickListener {
             val intent = Intent(this, SecondActivity::class.java)
+
+            intent.putExtra("user", user.text.toString())
+            intent.putExtra("userFrom", userFrom.text.toString())
+            intent.putExtra("desc", desc.text.toString())
+
             startActivity(intent)
         }
-
     }
 }

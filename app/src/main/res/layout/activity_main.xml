@@ -7,28 +7,59 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btn_ant_activity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="First Activity"
+    <EditText
+        android:id="@+id/editText_person"
+        android:layout_width="226dp"
+        android:layout_height="57dp"
+        android:ems="10"
+        android:hint="Кому"
+        android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_second_activity"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_from"
+        app:layout_constraintVertical_bias="0.061" />
 
-    <Button
-        android:id="@+id/btn_second_activity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Second Activity"
-        app:layout_constraintBottom_toTopOf="@+id/btn_ant_activity"
+    <EditText
+        android:id="@+id/editText_from"
+        android:layout_width="226dp"
+        android:layout_height="57dp"
+        android:ems="10"
+        android:hint="От кого"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintVertical_bias="0.14" />
 
+    <EditText
+        android:id="@+id/editText_desc"
+        android:layout_width="226dp"
+        android:layout_height="57dp"
+        android:ems="10"
+        android:hint="Описание"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_person"
+        app:layout_constraintVertical_bias="0.078" />
+
+    <Button
+        android:id="@+id/button_send"
+        android:layout_width="151dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#373232"
+        android:text="Передать"
+        app:iconSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_desc"
+        app:layout_constraintVertical_bias="0.113" />
 </androidx.constraintlayout.widget.ConstraintLayout>

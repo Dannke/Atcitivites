@@ -8,4 +8,7 @@
      Идёт <b>направо</b> - песнь заводит,\n
      <b>Налево</b> - сказку говорит.</string>
     <string name="about_title">О программе</string>
+    <string name="second_activity">
+        Добро пожаловать на <b>вторую активность</b> данного приложения
+    </string>
 </resources>
